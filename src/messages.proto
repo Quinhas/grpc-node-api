@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package messages;
+
+message Message {
+  string id = 1;
+  string content = 2;
+  string author = 3;
+}
+
+message MessageInput {
+  string content = 1;
+  string author = 2;
+}
+
+service MessageService {
+  rpc GetMessage(GetMessageRequest) returns (Message);
+  rpc CreateMessage(CreateMessageRequest) returns (Message);
+  rpc UpdateMessage(UpdateMessageRequest) returns (Message);
+}
+
+message GetMessageRequest {
+  string id = 1;
+}
+
+message CreateMessageRequest {
+  MessageInput input = 1;
+}
+
+message UpdateMessageRequest {
+  string id = 1;
+  MessageInput input = 2;
+}

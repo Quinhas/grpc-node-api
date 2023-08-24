@@ -1,0 +1,20 @@
+{
+	"name": "grpc-node-api",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node src/grpc-server.js",
+		"create": "node src/grpc-client-create.js",
+		"update": "node src/grpc-client-update.js",
+		"get": "node src/grpc-client-get.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@grpc/grpc-js": "^1.9.1",
+		"@grpc/proto-loader": "^0.7.9"
+	}
+}
